@@ -83,4 +83,15 @@ describe('SongQueue', function() {
       SongModel.prototype.play.restore();
     });
   });
+
+  // describe('dequeueing multiple tracks are dequeued', function () {
+  //   it('removes songs from the queue', function (done) {
+  //     sinon.spy(SongModel.prototype, 'dequeue');
+  //     var songQueue = new SongQueue(songData1);
+  //     songQueue.enqueue(songData2);
+  //     songQueue.at(0).dequeue();
+  //     expect(songQueue.length).to.equal(1);
+  //   });
+  // });
+
 });

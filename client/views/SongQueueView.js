@@ -4,24 +4,10 @@ var SongQueueView = Backbone.View.extend({
   tagName:'table',
 
  initialize: function() {
-     /* vinaya */
-      this.collection.on('change', function(){
-      this.render();
-      }, this);
-
-
-    /*vinaya  */
-
-  /*  this.collection.on('change' , function(){
-      this.render();
-    }, this);*/
+    this.collection.on('add remove' , this.render, this);
     this.render();
   },
 
-/*    params.library.on('dequeue', function (song) {
-        this.get('songQueue').remove(song);
-    }, this);
-*/
 
 render: function(){
     // to preserve event handlers on child nodes, we must call .detach()
